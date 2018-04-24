@@ -100,23 +100,28 @@
 [date-picker] th {
   padding: 4px 5px;
   text-align: center;
-  width: 20px;
   height: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   border: none;
 }
+[date-picker] td button,
+[date-picker] th button {
+  color: #333;
+  background-color: #fff;
+  border-color: #d2deea;
+}
 [date-picker] .switch {
-  width: 145px;
+  width: auto;
 }
 [date-picker] span {
   display: block;
-  width: 23%;
-  height: 26px;
-  line-height: 25px;
+  width: 31%;
   float: left;
   margin: 1%;
+  width: 30%;
+  font-size: 14px;
   cursor: pointer;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -204,12 +209,6 @@
   background: none;
   color: #999999 !important;
   cursor: default;
-}
-[date-picker] [ng-switch-when="year"] span,
-[date-picker] [ng-switch-when="month"] span,
-[date-picker] [ng-switch-when="minutes"] span {
-  height: 54px;
-  line-height: 54px;
 }
 [date-picker] [ng-switch-when="date"] td {
   padding: 0;
