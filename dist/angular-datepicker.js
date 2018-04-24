@@ -1075,7 +1075,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "                ng-click=\"selectDate(month)\"\r" +
     "\n" +
-    "                ng-bind=\"month|mFormat:'MMM':tz\"></span>\r" +
+    "                ng-bind=\"month|mFormat:'MMMM':tz\"></span>\r" +
     "\n" +
     "        </td>\r" +
     "\n" +
