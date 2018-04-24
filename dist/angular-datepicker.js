@@ -985,17 +985,17 @@ $templateCache.put('templates/datepicker.html',
     "    <table>\n" +
     "      <thead>\n" +
     "        <tr>\n" +
-    "          <th>\n" +
-    "            <button ng-click=\"prev()\">\n" +
+    "          <th ng-click=\"prev()\">\n" +
+    "            <button>\n" +
     "              <i class=\"glyphicon glyphicon-chevron-left\"></i>\n" +
     "            </button>\n" +
     "          </th>\n" +
-    "          <th class=\"switch\">\n" +
-    "            <button ng-click=\"setView('year')\" ng-bind=\"date|mFormat:'YYYY':tz\">\n" +
+    "          <th class=\"switch\" ng-click=\"setView('year')\">\n" +
+    "            <button  ng-bind=\"date|mFormat:'YYYY':tz\">\n" +
     "            </button>\n" +
     "          </th>\n" +
-    "          <th>\n" +
-    "            <button ng-click=\"next()\">\n" +
+    "          <th ng-click=\"next()\">\n" +
+    "            <button >\n" +
     "              <i class=\"glyphicon glyphicon-chevron-right\"></i>\n" +
     "            </button>\n" +
     "          </th>\n" +

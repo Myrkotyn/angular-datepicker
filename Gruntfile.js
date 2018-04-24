@@ -115,12 +115,6 @@ module.exports = function (grunt) {
         '<%= yeoman.app %>/scripts/{,*/}*.js'
       ]
     },
-    karma: {
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      }
-    },
     cssmin: {
       dist: {
         expand: true,
@@ -151,9 +145,17 @@ module.exports = function (grunt) {
     copy: {
       styles: {
         expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '<%= yeoman.tmp %>/styles/',
-        src: '{,*/}*.css'
+        cwd: 'app/styles/',
+        src: ['*.css'],
+        dest: 'dist/styles/',
+        filter: 'isFile'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'app/fonts/',
+        src: ['**'],
+        dest: 'dist/fonts/',
+        filter: 'isFile'
       }
     },
     ngtemplates: {
@@ -180,7 +182,8 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
-        'copy:styles'
+        'copy:styles',
+        'copy:fonts'
       ]
     },
     concat: {
@@ -237,7 +240,8 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'ngmin',
-    'uglify'
+    'uglify',
+    'copy'
   ]);
 
   grunt.registerTask('default', ['build']);

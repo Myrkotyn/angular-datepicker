@@ -5,7 +5,9 @@
   "repository": {
     "url": "https://github.com/g00fy-/angular-datepicker.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
   "devDependencies": {
     "bower": "1.5.3",
     "grunt": "0.4.5",

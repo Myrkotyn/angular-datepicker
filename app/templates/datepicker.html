@@ -44,17 +44,17 @@
     <table>
       <thead>
         <tr>
-          <th>
-            <button ng-click="prev()">
+          <th ng-click="prev()">
+            <button>
               <i class="glyphicon glyphicon-chevron-left"></i>
             </button>
           </th>
-          <th class="switch">
-            <button ng-click="setView('year')" ng-bind="date|mFormat:'YYYY':tz">
+          <th class="switch" ng-click="setView('year')">
+            <button  ng-bind="date|mFormat:'YYYY':tz">
             </button>
           </th>
-          <th>
-            <button ng-click="next()">
+          <th ng-click="next()">
+            <button >
               <i class="glyphicon glyphicon-chevron-right"></i>
             </button>
           </th>
