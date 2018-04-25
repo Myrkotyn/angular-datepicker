@@ -70,6 +70,11 @@
       <div>
         <h5>Min ({{demoForm.pickerMinDate.$error.min ? 'Min: invalid' : 'Min: valid'}})</h5>        
         <input date-time name="pickerMinDate" ng-model="dates.today" id="pickerMinDate" min-date="minDate" view="date" min-view="hours" timezone="UTC" format="lll">
+        <span>
+          <button type="button" class="btn btn-default">
+            <i class="fa fa-calendar"></i>
+          </button>
+        </span>
       </div>
 
       <div>

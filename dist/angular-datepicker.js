@@ -966,15 +966,25 @@ $templateCache.put('templates/datepicker.html',
     "    <table>\n" +
     "      <thead>\n" +
     "        <tr>\n" +
-    "          <th ng-click=\"prev(10)\">&lsaquo;</th>\n" +
-    "          <th colspan=\"5\" class=\"switch\" ng-bind=\"years[0].year()+' - '+years[years.length-1].year()\"></th>\n" +
-    "          <th ng-click=\"next(10)\">&rsaquo;</i>\n" +
+    "          <th>\n" +
+    "            <button ng-click=\"prev(10)\">\n" +
+    "              <i class=\"glyphicon glyphicon-chevron-left\"></i>\n" +
+    "            </button>\n" +
+    "          </th>\n" +
+    "          <th colspan=\"3\" class=\"switch\">\n" +
+    "            <button ng-bind=\"years[0].year()+' - '+years[years.length-1].year()\">\n" +
+    "            </button>\n" +
+    "          </th>\n" +
+    "          <th>\n" +
+    "            <button ng-click=\"next(10)\">\n" +
+    "              <i class=\"glyphicon glyphicon-chevron-right\"></i>\n" +
+    "            </button>\n" +
     "          </th>\n" +
     "        </tr>\n" +
     "      </thead>\n" +
     "      <tbody>\n" +
     "        <tr>\n" +
-    "          <td colspan=\"7\">\n" +
+    "          <td colspan=\"5\">\n" +
     "            <span ng-class=\"classes[$index]\" ng-repeat=\"year in years\" ng-click=\"selectDate(year)\" ng-bind=\"year.year()\"></span>\n" +
     "          </td>\n" +
     "        </tr>\n" +
@@ -985,8 +995,8 @@ $templateCache.put('templates/datepicker.html',
     "    <table>\n" +
     "      <thead>\n" +
     "        <tr>\n" +
-    "          <th ng-click=\"prev()\">\n" +
-    "            <button>\n" +
+    "          <th>\n" +
+    "            <button ng-click=\"prev()\">\n" +
     "              <i class=\"glyphicon glyphicon-chevron-left\"></i>\n" +
     "            </button>\n" +
     "          </th>\n" +
@@ -994,8 +1004,8 @@ $templateCache.put('templates/datepicker.html',
     "            <button  ng-bind=\"date|mFormat:'YYYY':tz\">\n" +
     "            </button>\n" +
     "          </th>\n" +
-    "          <th ng-click=\"next()\">\n" +
-    "            <button >\n" +
+    "          <th>\n" +
+    "            <button ng-click=\"next()\">\n" +
     "              <i class=\"glyphicon glyphicon-chevron-right\"></i>\n" +
     "            </button>\n" +
     "          </th>\n" +
